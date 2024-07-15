@@ -51,7 +51,7 @@ function showWeatherDetails(data) {
     const description = data.weather[0] && data.weather[0].description ? data.weather[0].description : 'N/A';
     const country = data.sys.country ? data.sys.country : 'N/A';
     const dust = data.main.grnd_level ? data.main.grnd_level : 'N/A'; 
-    const visibilityMiles = data.visibility ? (data.visibility / 1609.34).toFixed(2) : 'N/A'; // Converting meters to miles 
+    const visibilityMiles = data.visibility ? (data.visibility / 1609.34).toFixed(2) : 'N/A'; 
     const sunriseTimestamp = data.sys.sunrise ? data.sys.sunrise * 1000 : 'N/A';
     const sunsetTimestamp = data.sys.sunset ? data.sys.sunset * 1000 : 'N/A';
     const sunriseTime = sunriseTimestamp !== 'N/A' ? new Date(sunriseTimestamp).toLocaleTimeString('en-US') : 'N/A';
